@@ -9,8 +9,8 @@ public class HolaMundo {
         var j = 4;
 
         System.out.println(i + j);// Aqui se realiza la suma de numeros
-        System.out.println(i + j + usuario);//Evaluacion de izq a derecha, realiza suma
+        System.out.println(i + j + usuario);// Evaluacion de izq a derecha, realiza suma
         System.out.println(usuario + i + j);// contexto cadena
-        System.out.println(usuario + (i + j))//Uso de parentesis modifica la prioridad;
+        System.out.println(usuario + (i + j));// Uso de parentesis modifica la prioridad;
     }
 }

@@ -4,7 +4,7 @@
         {
             "label": "JC",
             "command": "java",
-            "windows":{
+            "windows": {
                 "command": "C:\\Program Files\\Java\\jdk-15.0.2\\bin\\javac.exe"
             },
             "args": [
@@ -14,12 +14,37 @@
         {
             "label": "JR",
             "command": "java",
-            "windows":{
+            "windows": {
                 "command": "C:\\Program Files\\Java\\jdk-15.0.2\\bin\\java.exe"
             },
             "args": [
                 "${fileBasenameNoExtension}"
             ]
+        },
+        {
+            "type": "java (buildArtifact)",
+            "targetPath": "${workspaceFolder}/${workspaceFolderBasename}.jar",
+            "elements": [
+                "${compileOutput}",
+                "${dependencies}"
+            ],
+            "problemMatcher": [],
+            "label": "java (buildArtifact): Java",
+            "group": "build"
+        },
+        {
+            "type": "java (build)",
+            "paths": [
+                "${workspace}"
+            ],
+            "isFullBuild": true,
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [],
+            "label": "java (build): Build Workspace",
+            "detail": "$(tools) Build all the Java projects in workspace."
         }
     ]
 }
